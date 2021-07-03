@@ -28,6 +28,6 @@ for i in body {
     }
     result.append(count)
 }
-_ = result.map { 
+_ = result.map {
     print("\($0)", separator: " ", terminator: " ")
 }
