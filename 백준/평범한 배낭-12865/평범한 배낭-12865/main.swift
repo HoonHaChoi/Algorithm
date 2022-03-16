@@ -45,3 +45,15 @@ struct NormalBackpack {
         let value: Int
     }
 }
+
+let input = readLine()!.split(separator: " ").map { Int(String($0))! }
+let n = input[0]
+let limitWeight = input[1]
+
+var stuff: [NormalBackpack.Stuff] = []
+for _ in 0..<n {
+    let data = readLine()!.split(separator: " ").map { Int(String($0))! }
+    stuff.append(.init(weight: data[0], value: data[1]))
+}
+var nb = NormalBackpack(n: n, limitWeight: limitWeight, stuff: stuff)
+nb.solution()
